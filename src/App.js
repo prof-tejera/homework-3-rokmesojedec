@@ -3,10 +3,29 @@ import MediaButtons from 'MediaButtons/MediaButtons';
 import LoginForm from 'LoginForm/LoginForm';
 import Pager from 'Pager/Pager';
 import RadioButtons from 'RadioButtons/RadioButtons';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   render() {
+    const radioButtons = [{
+      text: "Apple",
+      value: 1,
+      checked: true
+    },
+    {
+      text: "Pear",
+      value: 2
+    },
+    {
+      text: "Orange",
+      value: 3,
+      disabled: true
+    },{
+      text: "Kiwi",
+      value: 4
+    }]
+
+    
     return (
       <div>
         <div className="App-component">
@@ -19,23 +38,23 @@ class App extends Component {
         </div>
 
         <div className="App-component">
-          <header className="App-header">Login form component (TODO)</header>
+          <header className="App-header">Login form component</header>
           <div className="App-content">
             <LoginForm />
           </div>
         </div>
 
         <div className="App-component">
-          <header className="App-header">Pager component (TODO)</header>
+          <header className="App-header">Pager component</header>
           <div className="App-content">
-            <Pager />
+            <Pager start="1" end="15" current="4" compact={true} />
           </div>
         </div>
 
         <div className="App-component">
-          <header className="App-header">Radio Buttons component (TODO)</header>
+          <header className="App-header">Radio Buttons component</header>
           <div className="App-content">
-            <RadioButtons />
+            <RadioButtons buttons={radioButtons} name="demo"/>
           </div>
         </div>
       </div>

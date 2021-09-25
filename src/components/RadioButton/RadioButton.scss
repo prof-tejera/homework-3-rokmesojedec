@@ -1,0 +1,27 @@
+@import "./../../style/variables";
+
+.radioBtnPanel {
+    border: 1px solid #d4d4d4;
+}
+
+input[type="radio"] {
+    display: none;
+    &:checked + label {
+        background: $blue;
+        color: white;
+    }
+    &:disabled + label {
+        background: $dark-gray;
+        color: black;
+        cursor: not-allowed;
+    }
+}
+
+label {
+    cursor: pointer;
+    padding: 0.5rem 1.25rem;
+    margin: 0;
+    background: $light-gray;
+    display: inline-block;
+    user-select: none;
+}

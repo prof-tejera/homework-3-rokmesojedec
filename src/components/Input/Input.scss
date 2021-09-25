@@ -1,0 +1,8 @@
+@import "./../../style/variables";
+
+.App-Input {
+    padding: 0.5rem 1rem; 
+    margin-bottom: 0.5rem;
+    border: 1px solid $light-gray;
+    width: auto;
+}
