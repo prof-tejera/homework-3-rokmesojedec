@@ -1,0 +1,48 @@
+@import "./../../style/variables";
+$unit: 1rem;
+
+.Default-button {
+  border: none;
+  color: black;
+  padding: 0.5 * $unit 1 * $unit;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  &.sm {
+    padding: 0.25 * $unit 0.5 * $unit;
+    font-size: 12px;
+  }
+
+  &.xl {
+    padding: 0.8 * $unit 2.75 * $unit;
+    font-size: 18px;
+  }
+
+  &.primary {
+    background-color: $blue;
+    color: white;
+  }
+
+  &.secondary {
+    background-color: rgb(116, 0, 194);
+    color: white;
+  }
+
+  &.success {
+    background-color: rgb(0, 182, 0);
+    color: white;
+  }
+
+  &:active {
+    background-color: #d0d0d0;
+  }
+
+  &:disabled {
+    color: rgb(206, 206, 206);
+    cursor: not-allowed;
+  }
+}
